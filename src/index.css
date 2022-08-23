@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px 0 35px;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.header-icons a {
+  color: #1e3a8a;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.img {
+  width: 170px;
+}
+hr {
+  border-top: 3px solid rgb(207, 204, 204);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: rgb(147 197 253);
+}
+span {
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  background-color: rgb(215, 212, 212);
+  height: 89vh;
+}
+
+.sidebar {
+  width: 14%;
+
+  border-right: 1px solid grey;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e3a8a;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+}
+
+.sidebar h3 {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.sidebar ul {
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.sidebar ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.siderbar-item a {
+  display: flex;
+  align-items: center;
+}
+
+.svg {
+  margin-right: 5px;
+}
+
+.pdf-container,
+.form-container {
+  /* background-color: rgb(228, 224, 224); */
+}
+.pdf-page {
+  width: 43%;
+}
+
+.pdf-container {
+  margin-right: 5px;
+  padding: 10px;
+}
+.pdf {
+  height: 75vh;
+}
+/*FORM*/
+.form-container {
+  padding: 1rem;
+  width: 43%;
+  background-color: rgb(200, 198, 198);
+}
+.cont-form {
+  background: white;
+  padding: 19px 19px 14px 19px;
+  font-size: 18px;
+  height: 74vh;
+}
+
+.form__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__title h3 {
+  font-size: 2rem;
+}
+.show {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: white;
+  padding: 6px;
+  border: 3px solid rgb(241, 239, 239);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.show:hover {
+  background-color: #0097a7;
+  color: white;
+  transition: 0.3s ease-in-out;
+  border: 3px solid #08b3c6;
+}
+.form {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 0 auto; */
+  margin-top: 35px;
+}
+.form p {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+.campos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 17px;
+}
+.col-form {
+  flex-grow: 1;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+}
+input {
+  margin-top: 13px;
+  margin-bottom: 10px;
+  padding: 12px;
+  margin-right: 5px;
+  width: 340px;
+  border: 3px solid rgb(229, 229, 229);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.signature-container {
+  text-align: left;
+}
+.signature-pad {
+  text-align: center;
+  margin-top: 10px;
+  width: 450px;
+  height: 150px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 0px;
+  margin-bottom: 18px;
+}
+.buttons button {
+  padding: 11px;
+  margin-right: 10px;
+
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.reset {
+  background-color: white;
+  border: 3px solid rgb(243, 239, 239);
+}
+.save {
+  background-color: #0097a7;
+  border: 3px solid #08b3c6;
+  color: white;
+  width: 80px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.continue {
+  text-align: center;
+  margin-top: 15px;
+}
+.continue button {
+  padding: 13px;
+  margin-right: 10px;
+  background-color: #0097a7;
+  border: 3px solid #08b3c6;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.submit {
+  text-align: center;
+}
+/*FORM END*/
+/*icons*/
+.blue {
+  color: blue;
+}
+.green {
+  color: rgb(63, 170, 63);
+}
+.red {
+  color: rgb(238, 19, 19);
+}
+.blue,
+.green,
+.red {
+  font-size: 20px;
+  margin-right: 7px;
+}
+/*INFOPAGE*/
+.infopage {
+  padding: 13px;
+  margin-left: 10px;
+  overflow-y: scroll;
+  height: 75vh;
+  width: 43%;
+}
+
+.cont {
+  background: white;
+  padding: 15px;
+  font-size: 18px;
+}
+.container-info {
+  margin-bottom: 35px;
+}
+.row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.columns-container {
+  background-color: rgb(246, 245, 245);
+  margin-top: 19px;
+  border-radius: 5px;
+  padding: 13px;
+  padding-bottom: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 18px;
+  flex-wrap: nowrap;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col > p {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: flex-start;
+  text-align: left;
+  margin-top: 7px;
+  font-size: 20px;
+}
+
+.col-info {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.col-info p {
+  margin-top: 24px;
+}
+
+.row2 {
+  margin-top: 15px;
+}
+
+.details {
+  padding: 0 7px 0 9px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: left;
+  letter-spacing: 0.6px;
+  line-height: 1.6rem;
+}
+
+.row2-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.row2_col {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.row2_col p {
+  border-top: 2px solid rgb(213, 210, 210);
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  justify-content: space-around;
+  padding: 15px 0 15px 0;
+}
+.fix {
+  margin-top: -105px;
+}
+
+.row3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.row3-col {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.row3-col p {
+  border-top: 3px solid rgb(243, 238, 238);
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  justify-content: space-evenly;
+  padding: 15px 0 15px 0;
+}
+.row3-col p span {
+  /* margin-right: 50px; */
+}
+.fix2 {
+  margin-top: -50px;
+}
+
+.fix2:last-child {
+  border-bottom: 3px solid rgb(243, 238, 238);
+}
+/*INFOPAGE END*/
