@@ -10,21 +10,22 @@ const Form = ({ showPdf, setShowPdf }) => {
   const [zip, setZip] = useState("");
   const [phone, setPhone] = useState("");
   const [firma, setFirma] = useState("");
-
+  const [error, setError] = useState("");
   const [dataEnviar, setDataEnviar] = useState({});
-
-  const [error, setError] = useState(false);
 
   const signaturePad = useRef({});
   const handleReset = (e) => {
     e.preventDefault();
     signaturePad.current.clear();
   };
-  const handleSave = (e) => {
-    e.preventDefault();
-    const dataURL = signaturePad.current.toDataURL("image/png");
-    setFirma(dataURL);
-    if ([name, address, city, state, zip, phone, firma].includes("")) {
+  const saveCanvas = () => {
+    const dataCanvas = signaturePad.current
+      .getTrimmedCanvas()
+      .toDataURL("image/png");
+    setFirma(dataCanvas);
+  };
+  const handleSave = () => {
+    if ([name, address, city, state, zip, phone].includes("")) {
       setError(true);
       return;
     }
@@ -37,6 +38,13 @@ const Form = ({ showPdf, setShowPdf }) => {
       phone,
       firma,
     });
+    setError(false);
+    console.log(dataEnviar);
+
+    /*ENVIAR A UN ENDPOINT*/
+    /*AL MOMENTO DE HACER ESTO LO HARIAMOS CON UN TRY CATCH FINALLY PARA LIMPIAR TAMBIEN EL FORMULARIO
+    PERO HUBO PROBLEMAS CON EL CORS Y NO PERMITIA LA VISUALIZACION DEL PROYECTO*/
+
     // Axios.post(url, {
     //   name: dataEnviar.name,
     //   address: dataEnviar.address,
@@ -46,11 +54,10 @@ const Form = ({ showPdf, setShowPdf }) => {
     //   phone: paseInt(dataEnviar.phone),
     //   firma: dataEnviar.firma,
     // });
-    setError(false);
   };
+
   const handleClean = (e) => {
     e.preventDefault();
-    setError(false);
     setName("");
     setAddress("");
     setCity("");
@@ -58,6 +65,12 @@ const Form = ({ showPdf, setShowPdf }) => {
     setZip("");
     setPhone("");
     signaturePad.current.clear();
+    console.log(dataEnviar);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleSave();
   };
   return (
     <div className="form-container">
@@ -71,7 +84,7 @@ const Form = ({ showPdf, setShowPdf }) => {
             </button>
           </div>
         </div>
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <p>Fill your data to generate the contract</p>
           {error ? <p>Tiene que llenar todos los campos</p> : null}
           <div className="campos">
@@ -147,7 +160,13 @@ const Form = ({ showPdf, setShowPdf }) => {
               canvasProps={{
                 className: "signature-pad",
               }}
+              onEnd={saveCanvas}
             />
+            {dataEnviar.name && (
+              <div>
+                <p>Enviando datos por axios revisar código comentado</p>
+              </div>
+            )}
           </div>
           <div className="buttons">
             <button className="reset" onClick={handleReset}>
@@ -155,7 +174,7 @@ const Form = ({ showPdf, setShowPdf }) => {
             </button>
             <input type="submit" className="save" onClick={handleSave} />
             <button className="reset" onClick={handleClean}>
-              Limpiar
+              Limpiar Form
             </button>
           </div>
           <hr />

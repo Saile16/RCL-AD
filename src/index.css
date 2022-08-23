@@ -19,6 +19,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 35px 0 35px;
+  height: 166px;
 }
 .header-icons {
   display: flex;
@@ -34,7 +35,7 @@ body {
   width: 170px;
 }
 hr {
-  border-top: 3px solid rgb(207, 204, 204);
+  border-top: 2px solid rgb(207, 204, 204);
 }
 a {
   text-decoration: none;
@@ -54,16 +55,14 @@ span {
 
 .sidebar {
   width: 14%;
-
   border-right: 1px solid grey;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #1e3a8a;
-  font-size: 18px;
+  font-size: 15px;
   color: white;
-  padding: 10px;
+  padding: 3px;
 }
 
 .sidebar h3 {
@@ -101,11 +100,11 @@ span {
   padding: 10px;
 }
 .pdf {
-  height: 75vh;
+  height: 78vh;
 }
 /*FORM*/
 .form-container {
-  padding: 1rem;
+  padding: 0.7rem;
   width: 43%;
   background-color: rgb(200, 198, 198);
 }
@@ -113,7 +112,7 @@ span {
   background: white;
   padding: 19px 19px 14px 19px;
   font-size: 18px;
-  height: 74vh;
+  height: 78vh;
 }
 
 .form__title {
@@ -122,12 +121,12 @@ span {
   justify-content: space-between;
 }
 .form__title h3 {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 .show {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: white;
   padding: 6px;
   border: 3px solid rgb(241, 239, 239);
@@ -146,10 +145,10 @@ span {
   flex-direction: column;
   justify-content: center;
   /* margin: 0 auto; */
-  margin-top: 35px;
+  margin-top: 15px;
 }
 .form p {
-  font-size: 21px;
+  font-size: 17px;
   font-weight: bold;
   margin-bottom: 1.2rem;
 }
@@ -157,7 +156,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 .col-form {
   flex-grow: 1;
@@ -165,7 +164,7 @@ span {
 
 label {
   display: block;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
 }
 input {
@@ -173,10 +172,11 @@ input {
   margin-bottom: 10px;
   padding: 12px;
   margin-right: 5px;
-  width: 340px;
-  border: 3px solid rgb(229, 229, 229);
+  width: 210px;
+  border: 2px solid rgb(229, 229, 229);
   border-radius: 5px;
   background-color: white;
+  height: 30px;
 }
 
 .signature-container {
@@ -185,8 +185,8 @@ input {
 .signature-pad {
   text-align: center;
   margin-top: 10px;
-  width: 450px;
-  height: 150px;
+  width: 344px;
+  height: 120px;
   margin-bottom: 10px;
   background-color: white;
   border: 3px solid black;
@@ -200,38 +200,40 @@ input {
   margin-bottom: 18px;
 }
 .buttons button {
-  padding: 11px;
+  padding: 8px;
   margin-right: 10px;
 
   border-radius: 5px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 12px;
 }
 .reset {
   background-color: white;
-  border: 3px solid rgb(243, 239, 239);
+  border: 2px solid rgb(243, 239, 239);
 }
 .save {
   background-color: #0097a7;
-  border: 3px solid #08b3c6;
+  border: 2px solid #08b3c6;
   color: white;
-  width: 80px;
+  width: 70px;
+  padding: 0;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 12px;
+  height: 32px;
 }
 .continue {
   text-align: center;
   margin-top: 15px;
 }
 .continue button {
-  padding: 13px;
+  padding: 8px;
   margin-right: 10px;
   background-color: #0097a7;
-  border: 3px solid #08b3c6;
+  border: 2px solid #08b3c6;
   color: white;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 11px;
 }
 .submit {
   text-align: center;
@@ -258,7 +260,7 @@ input {
   padding: 13px;
   margin-left: 10px;
   overflow-y: scroll;
-  height: 75vh;
+  height: 78vh;
   width: 43%;
 }
 
@@ -280,12 +282,12 @@ input {
   background-color: rgb(246, 245, 245);
   margin-top: 19px;
   border-radius: 5px;
-  padding: 13px;
+  padding: 10px;
   padding-bottom: 27px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-size: 18px;
+  font-size: 13px;
   flex-wrap: nowrap;
 }
 
@@ -301,7 +303,7 @@ input {
   justify-content: flex-start;
   text-align: left;
   margin-top: 7px;
-  font-size: 20px;
+  font-size: 13px;
 }
 
 .col-info {
@@ -309,7 +311,8 @@ input {
   margin-bottom: 5px;
 }
 .col-info p {
-  margin-top: 24px;
+  margin-top: 22px;
+  font-size: 11px;
 }
 
 .row2 {
@@ -319,10 +322,10 @@ input {
 .details {
   padding: 0 7px 0 9px;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 11px;
   text-align: left;
-  letter-spacing: 0.6px;
-  line-height: 1.6rem;
+  letter-spacing: 0.4px;
+  line-height: 1.4rem;
 }
 
 .row2-flex {
@@ -344,12 +347,12 @@ input {
   border-top: 2px solid rgb(213, 210, 210);
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 13px;
   justify-content: space-around;
-  padding: 15px 0 15px 0;
+  padding: 11px 0 11px 0;
 }
 .fix {
-  margin-top: -105px;
+  margin-top: -80px;
 }
 
 .row3 {
@@ -372,15 +375,15 @@ input {
   border-top: 3px solid rgb(243, 238, 238);
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 13px;
   justify-content: space-evenly;
-  padding: 15px 0 15px 0;
+  padding: 10px 0 10px 0;
 }
 .row3-col p span {
   /* margin-right: 50px; */
 }
 .fix2 {
-  margin-top: -50px;
+  margin-top: -35px;
 }
 
 .fix2:last-child {
