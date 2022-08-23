@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import SignaturePad from "react-signature-canvas";
 import { HiDocumentText } from "react-icons/hi";
-import Axios from "axios";
+// import Axios from "axios";
 const Form = ({ showPdf, setShowPdf }) => {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
@@ -37,15 +37,15 @@ const Form = ({ showPdf, setShowPdf }) => {
       phone,
       firma,
     });
-    Axios.post(url, {
-      name: dataEnviar.name,
-      address: dataEnviar.address,
-      city: dataEnviar.city,
-      state: dataEnviar.state,
-      zip: dataEnviar.zip,
-      phone: paseInt(dataEnviar.phone),
-      firma: dataEnviar.firma,
-    });
+    // Axios.post(url, {
+    //   name: dataEnviar.name,
+    //   address: dataEnviar.address,
+    //   city: dataEnviar.city,
+    //   state: dataEnviar.state,
+    //   zip: dataEnviar.zip,
+    //   phone: paseInt(dataEnviar.phone),
+    //   firma: dataEnviar.firma,
+    // });
     setError(false);
   };
   const handleClean = (e) => {
