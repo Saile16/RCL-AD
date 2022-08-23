@@ -1,5 +1,6 @@
 # RCL-AD
 Proyecto American Dream, el código se puede refactorizar bastante aún.
+
 Funcionalidades:
 1. Mostrar PDF o pantalla de Info con el botón Show.
 2. Pad de firma con mouse y opción de limpiar la firma.
