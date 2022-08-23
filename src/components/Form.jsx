@@ -64,6 +64,7 @@ const Form = ({ showPdf, setShowPdf }) => {
     setState("");
     setZip("");
     setPhone("");
+    setDataEnviar({});
     signaturePad.current.clear();
     console.log(dataEnviar);
   };
